@@ -1,6 +1,3 @@
-# Data Cleaning and Analysis of Cricket Player Statistics
-
-This repository contains a comprehensive guide to cleaning and analyzing a dataset containing cricket player statistics. The dataset includes information about players' careers, batting statistics, and other relevant attributes.
 
 ## Data Cleaning Steps
 
