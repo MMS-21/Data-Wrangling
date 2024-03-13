@@ -1,5 +1,3 @@
----
-
 # Data Cleaning and Visualization Process for FIFA 21 Dataset
 
 ## Introduction
@@ -17,13 +15,12 @@ import pandas as pd
 # Load the dataset
 df = pd.read_csv('fifa21_dataset.csv')
 ```
-
 ### 1.2 Cleaning the 'Value' Column
-- Created a function `clean_value` to process the 'Value' column.
+- Created a function clean_value to process the 'Value' column.
 - Removed the Euro sign ('€') from the values.
 - Converted 'M' values (million) to numeric.
 - Converted 'K' values (thousands) to numeric and then to millions.
-
+  
 ```python
 def clean_value(value):
     if 'M' in value:
@@ -35,20 +32,15 @@ def clean_value(value):
 
 df['Value'] = df['Value'].apply(clean_value)
 ```
-
 ### 1.3 Data Type Consistency
 - Ensured consistency in data types for the 'Value' column.
-
-```python
+``` python
 df['Value'] = pd.to_numeric(df['Value'])
 ```
-
 ## 2. Visualization
-
 ### 2.1 Histogram of Player Values
 - Utilized Matplotlib to create a histogram of player values in millions.
-
-```python
+``` python
 import matplotlib.pyplot as plt
 
 plt.figure(figsize=(10, 6))
@@ -59,8 +51,5 @@ plt.ylabel('Frequency')
 plt.grid(True)
 plt.show()
 ```
-
 ## Conclusion
-The dataset has been successfully cleaned, and a histogram visualization has been created to analyze the distribution of player values.
-
----
+- The dataset has been successfully cleaned, and a histogram visualization has been created to analyze the distribution of player values.
